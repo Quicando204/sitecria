@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Móveis planejados de alto padrão em Luanda, Angola. A CRIA+ une design moderno, sofisticação e funcionalidade para transformar o seu lar. Solicite um orçamento!"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="CRIA+ | Móveis Planejados de Alto Padrão em Angola"
+    />
+    <link rel="preload" as="image" href="img/cria.webp" />
+
+    <meta property="og:site_name" content="CRIA+" />
+    <meta
+      property="og:description"
+      content="Móveis planejados de alto padrão em Luanda, Angola. Design moderno, sofisticação e funcionalidade para transformar o seu lar."
+    />
+    <meta
+      property="og:image"
+      content="https://quicando204.github.io/sitecria/img/cria.webp"
+    />
+    <meta property="og:url" content="https://quicando204.github.io/sitecria/" />
+    <meta property="og:locale" content="pt_AO" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="CRIA+ | Móveis Planejados de Alto Padrão em Angola"
+    />
+    <meta
+      name="twitter:description"
+      content="Móveis planejados de alto padrão em Luanda, Angola. Design moderno, sofisticação e funcionalidade para transformar o seu lar."
+    />
+    <meta
+      name="twitter:image"
+      content="https://quicando204.github.io/sitecria/img/cria.webp"
+    />
+     <!-- 2. Preload da imagem hero -->
+  <link rel="preload" as="image" href="img/cria.webp" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://quicando204.github.io/sitecria/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=design_services"
+    />
+    <link rel="shortcut icon" href="favicon/favicon.png" type="image/x-icon" />
+
+    <title>CRIA+ | Móveis Planejados de Alto Padrão em Angola</title>
+
+    <!-- GOOGLE FONT -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="Styles/index.css" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        overflow-x: hidden;
+        width: 100%;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #fff;
+      }
+
+      /* ================= HEADER ================= */
+
+      header {
+        width: 100%;
+        height: 85px;
+        padding: 0px 70px;
+        background: #111111;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        z-index: 1000;
+      }
+      
+
+      /* LOGO */
+
+      .logo {
+        color: white;
+        font-size: 30px;
+        font-weight: 700;
+      }
+
+      .logo span {
+        color: #d88916;
+      }
+
+      /* MENU */
+
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 35px;
+      }
+
+      nav a {
+        color: #d6d6d6;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+        transition: 0.3s;
+        position: relative;
+      }
+
+      nav a:hover,
+      nav .active {
+        color: #d88916;
+      }
+      nav a::after {
+        content: " ";
+        width: 0%;
+        height: 2px;
+        background-color: #d88916;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: 0.5s ease-in-out;
+      }
+      nav a:hover::after {
+        width: 100%;
+      }
+
+      /* BURGUER */
+
+      #burguer {
+        display: none;
+        cursor: pointer;
+        color: white;
+      }
+
+      .material-symbols-outlined {
+        font-size: 35px;
+      }
+
+      /* ================= HERO ================= */
+
+      #hero {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 40px 20px 50px;
+        gap: 10px;
+        position: relative;
+        overflow: hidden;
+
+        /* IMAGEM + OVERLAY */
+
+        background:
+          linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.82) 0%,
+            rgba(0, 0, 0, 0.55) 45%,
+            rgba(0, 0, 0, 0.18) 100%
+          ),
+          url("img/cria.webp");
+
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      /* TITULO */
+
+      .hero-title {
+        font-size: 1.4em;
+      }
+
+      .hero-title h1 {
+        color: white;
+        line-height: 55px;
+      }
+
+      .hero-title strong {
+        color: #d88916;
+      }
+
+      /* TEXTO */
+
+      .paragrafos {
+        line-height: 30px;
+      }
+
+      .paragrafos p {
+        color: #e7e7e7;
+      }
+
+      /* BOTOES */
+
+      .botoes {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+      }
+
+      .botoes button {
+        padding: 10px 15px;
+        border-radius: 8px;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+        transition: 0.3s;
+        font-family: "Poppins", sans-serif;
+      }
+
+      /* BOTAO LARANJA */
+
+      .botoes button:first-child {
+        background: #d88916;
+        border: none;
+        color: white;
+        box-shadow: 0px 4px 20px rgba(216, 137, 22, 0.25);
+      }
+
+      .botoes button:first-child:hover {
+        background: #f09a19;
+        transform: translateY(-2px);
+      }
+
+      /* BOTAO TRANSPARENTE */
+
+      .botoes button:last-child {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        color: white;
+      }
+
+      .botoes button:last-child:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      #sobre {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        width: 100%;
+        border: 1px solid red;
+        gap: 10px;
+      }
+      #box-texto {
+        border-left: 5px solid red;
+        padding-left: 5px;
+      }
+
+      .material-symbols-outlined {
+        color: #f09a19;
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+
+      .whats {
+        position: fixed;
+        right: 20px;
+        bottom: 30px;
+        z-index: 9999;
+      }
+
+      /* ================= MOBILE ================= */
+
+      @media (max-width: 768px) {
+        header {
+          padding: 0px 25px;
+        }
+
+        /* MENU MOBILE */
+
+        nav {
+          position: absolute;
+          top: 85px;
+          right: 0px;
+          width: 230px;
+          background: #171717;
+          padding: 25px;
+          border-radius: 12px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 20px;
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(-10px);
+          transition: 0.3s;
+        }
+
+        nav.show {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+        }
+
+        #burguer {
+          display: block;
+        }
+
+        /* HERO MOBILE */
+
+        #hero {
+          min-height: 200px;
+          background-position: 65% center;
+        }
+
+        .botoes {
+          flex-direction: row;
+          align-items: stretch;
+        }
+      }
+      @media (max-width: 900px) {
+        #historia {
+          flex-direction: column;
+          text-align: center;
+          padding: 50px 20px;
+        }
+
+        #historia-texto h2 {
+          font-size: 36px;
+        }
+
+        #imagem-historia img {
+          max-width: 100%;
+        }
+      }
+
+      #historia {
+        width: 100%;
+        padding: 80px 60px;
+        background: #f5f3f1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+      }
+
+      #imagem-historia {
+        flex: 1;
+      }
+
+      #imagem-historia img:hover {
+        transform: translateY(-10px);
+      }
+      #imagem-historia img {
+        box-shadow:
+          rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px,
+          rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px,
+          rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        width: 100%;
+        max-width: 550px;
+        border-radius: 12px;
+        display: block;
+        transition: all 0.3s ease;
+      }
+
+      #historia-texto {
+        flex: 1;
+        color: #333;
+      }
+
+      #historia-texto h3 {
+        font-size: 14px;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+      }
+
+      #historia-texto h2 {
+        font-size: 48px;
+        line-height: 1.1;
+        margin-bottom: 25px;
+        font-weight: 700;
+      }
+
+      #historia-texto p {
+        font-size: 17px;
+        line-height: 1.8;
+        color: #555;
+        margin-bottom: 20px;
+      }
+      .logo img {
+        width: clamp(120px, 20vw, 260px);
+        height: auto;
+        display: block;
+      }
+      header .logo img {
+        height: 180px;
+        width: auto;
+        object-fit: contain;
+        display: block;
+      }
+      .efeito-img-topo,
+      .efeito-txt-topo {
+        visibility: hidden;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ================= HEADER ================= -->
+
+    <header >
+      
+        <div class="logo">
+          <a href="index.html"><img src="img/Logo.webp" alt="CRIA+ Móveis Planejados em Luanda" /></a>
+        </div>
+        <!-- MENU BURGUER -->
+        <div id="burguer">
+          <span class="material-symbols-outlined" id="icon"> menu </span>
+        </div>
+        <!-- MENU -->
+        <nav id="menu">
+          <a href="index.html" class="active">Início</a>
+          <a href="sobre.html">Sobre Nós</a>
+          <a href="#serviço">Serviços</a>
+          <a href="#projeto">Projetos</a>
+          <a href="#contato">Contato</a>
+        </nav>
+     
+    </header>
+
+    <!-- ================= HERO ================= -->
+
+    <section id="hero">
+      <div id="texto-hero">
+        <div class="hero-title txt-animado-inicio">
+          <h1>
+            Design que<br />
+            <strong></strong>
+          </h1>
+        </div>
+        <div class="paragrafos">
+          <p>
+            Criamos móveis planejados com design<br />
+            moderno e funcionalidade para transformar <br />
+            o seu lar em um ambiente sofisticado e elegante.
+          </p>
+        </div>
+      </div>
+      <div class="botoes">
+        <button>VER PROJETOS</button>
+        <button>SOLICITAR ORÇAMENTO</button>
+      </div>
+    </section>
+    <section id="historia">
+      <div id="imagem-historia">
+        <img
+          src="img/Jantar.webp"
+          loading="lazy"
+          class="efeito-img-topo"
+          alt="Sala de jantar decorada com móveis planejados modernos da CRIA+"
+        />
+      </div>
+
+      <div id="historia-texto" class="efeito-txt-topo">
+        <strong><span style="color: #f09a19">NOSSA HISTÓRIA</span></strong>
+        <h2>
+          Paixão por criar ambientes que
+          <span style="color: #f09a19">inspiram</span>
+        </h2>
+        <p>
+          A CRIA+ nasceu com o propósito de transformar ambientes através de
+          móveis <br />
+          planejados de alta qualidade. Unimos design moderno, funcionalidade e
+          <br />
+          acabamento impecável para entregar projetos únicos e personalizados
+          para cada cliente.
+        </p>
+        <p>
+          Cada detalhe é pensado para refletir o estilo de quem vai viver o
+          espaço, <br />
+          proporcionando conforto, beleza e praticidade no dia a dia.
+        </p>
+      </div>
+    </section>
+    <div class="whats">
+     <a href="https://wa.me/244936055943" target="_blank" rel="noopener noreferrer">
+  <img src="img/WhatsappIcon.png" alt="Solicite orçamento de móveis planejados pelo WhatsApp" width="180" />
+</a>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      new Typed(".txt-animado-inicio strong", {
+        strings: [
+          "transforma.",
+          "constrói.",
+          "comunica.",
+          "inspira.",
+          "reinventa.",
+        ],
+        typeSpeed: 80,
+        backSpeed: 50,
+        backDelay: 1500,
+        loop: true,
+        showCursor: true,
+        cursorChar: "|",
+      });
+    </script>
+    <script src="https://unpkg.com/scrollreveal" defer ></script>
+    <script src="Js/main.js" defer></script>
+
+    <script type="application/ld+json" defer>
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "CRIA+",
+  "description": "Móveis planejados de alto padrão em Luanda, Angola. Design moderno, sofisticação e funcionalidade.",
+  "url": "https://quicando204.github.io/sitecria/",
+  "logo": "https://quicando204.github.io/sitecria/img/Logo.webp",
+  "image": "https://quicando204.github.io/sitecria/img/cria.webp",
+  "telephone": "+244936055943",
+  "priceRange": "$$",
+  "areaServed": {
+    "@type": "City",
+    "name": "Luanda"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Viana",
+    "addressRegion": "Luanda",
+    "addressCountry": "AO"
+  },
+  "sameAs": []
+}
+</script>
+  </body>
+</html>

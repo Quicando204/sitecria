@@ -42,8 +42,8 @@
       name="twitter:image"
       content="https://quicando204.github.io/sitecria/img/cria.webp"
     />
-     <!-- 2. Preload da imagem hero -->
-  <link rel="preload" as="image" href="img/cria.webp" />
+    <!-- 2. Preload da imagem hero -->
+    <link rel="preload" as="image" href="img/cria.webp" />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://quicando204.github.io/sitecria/" />
@@ -98,7 +98,6 @@
         position: relative;
         z-index: 1000;
       }
-      
 
       /* LOGO */
 
@@ -169,21 +168,82 @@
         gap: 10px;
         position: relative;
         overflow: hidden;
+      }
 
-        /* IMAGEM + OVERLAY */
+      /* SLIDES DE FUNDO */
+      .hero-slides {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+      }
 
-        background:
-          linear-gradient(
-            to right,
-            rgba(0, 0, 0, 0.82) 0%,
-            rgba(0, 0, 0, 0.55) 45%,
-            rgba(0, 0, 0, 0.18) 100%
-          ),
-          url("img/cria.webp");
-
+      .hero-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+      }
+
+      .hero-slide.ativo {
+        opacity: 1;
+      }
+
+      /* OVERLAY */
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.82) 0%,
+          rgba(0, 0, 0, 0.55) 45%,
+          rgba(0, 0, 0, 0.18) 100%
+        );
+        z-index: 1;
+      }
+
+      /* CONTEÚDO FICA POR CIMA */
+      #texto-hero,
+      .botoes {
+        position: relative;
+        z-index: 2;
+      }
+
+      /* DOTS */
+      .hero-dots {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        z-index: 3;
+      }
+
+      .hero-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.4);
+        cursor: pointer;
+        transition: 0.3s;
+        border: none;
+      }
+
+      .hero-dot.ativo {
+        background: #d88916;
+        transform: scale(1.3);
       }
 
       /* TITULO */
@@ -291,8 +351,6 @@
           padding: 0px 25px;
         }
 
-        /* MENU MOBILE */
-
         nav {
           position: absolute;
           top: 85px;
@@ -320,8 +378,6 @@
         #burguer {
           display: block;
         }
-
-        /* HERO MOBILE */
 
         #hero {
           min-height: 200px;
@@ -425,29 +481,40 @@
   <body>
     <!-- ================= HEADER ================= -->
 
-    <header >
-      
-        <div class="logo">
-          <a href="index.html"><img src="img/Logo.webp" alt="CRIA+ Móveis Planejados em Luanda" /></a>
-        </div>
-        <!-- MENU BURGUER -->
-        <div id="burguer">
-          <span class="material-symbols-outlined" id="icon"> menu </span>
-        </div>
-        <!-- MENU -->
-        <nav id="menu">
-          <a href="index.html" class="active">Início</a>
-          <a href="sobre.html">Sobre Nós</a>
-          <a href="#serviço">Serviços</a>
-          <a href="#projeto">Projetos</a>
-          <a href="#contato">Contato</a>
-        </nav>
-     
+    <header>
+      <div class="logo">
+        <a href="index.html"><img src="img/Logo.webp" alt="CRIA+ Móveis Planejados em Luanda" /></a>
+      </div>
+      <!-- MENU BURGUER -->
+      <div id="burguer">
+        <span class="material-symbols-outlined" id="icon"> menu </span>
+      </div>
+      <!-- MENU -->
+      <nav id="menu">
+        <a href="index.html" class="active">Início</a>
+        <a href="sobre.html">Sobre Nós</a>
+        <a href="#serviço">Serviços</a>
+        <a href="#projeto">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
     </header>
 
     <!-- ================= HERO ================= -->
 
     <section id="hero">
+
+      <!-- SLIDES DE FUNDO -->
+      <div class="hero-slides">
+        <div class="hero-slide ativo" style="background-image: url('img/cria.webp')"></div>
+        <div class="hero-slide" style="background-image: url('img/Jantar.webp')"></div>
+        <div class="hero-slide" style="background-image: url('img/Cozinha.webp')"></div>
+        <div class="hero-slide" style="background-image: url('img/escritorio.webp')"></div>
+      </div>
+
+      <!-- OVERLAY -->
+      <div class="hero-overlay"></div>
+
+      <!-- CONTEÚDO -->
       <div id="texto-hero">
         <div class="hero-title txt-animado-inicio">
           <h1>
@@ -467,7 +534,17 @@
         <button>VER PROJETOS</button>
         <button>SOLICITAR ORÇAMENTO</button>
       </div>
+
+      <!-- DOTS -->
+      <div class="hero-dots">
+        <button class="hero-dot ativo"></button>
+        <button class="hero-dot"></button>
+        <button class="hero-dot"></button>
+        <button class="hero-dot"></button>
+      </div>
+
     </section>
+
     <section id="historia">
       <div id="imagem-historia">
         <img
@@ -499,10 +576,11 @@
         </p>
       </div>
     </section>
+
     <div class="whats">
-     <a href="https://wa.me/244936055943" target="_blank" rel="noopener noreferrer">
-  <img src="img/WhatsappIcon.png" alt="Solicite orçamento de móveis planejados pelo WhatsApp" width="180" />
-</a>
+      <a href="https://wa.me/244936055943" target="_blank" rel="noopener noreferrer">
+        <img src="img/WhatsappIcon.png" alt="Solicite orçamento de móveis planejados pelo WhatsApp" width="180" />
+      </a>
     </div>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -523,32 +601,56 @@
         cursorChar: "|",
       });
     </script>
-    <script src="https://unpkg.com/scrollreveal" defer ></script>
+
+    <!-- SLIDER -->
+    <script>
+      const slides = document.querySelectorAll('.hero-slide');
+      const dots = document.querySelectorAll('.hero-dot');
+      let atual = 0;
+
+      function irParaSlide(index) {
+        slides[atual].classList.remove('ativo');
+        dots[atual].classList.remove('ativo');
+        atual = index;
+        slides[atual].classList.add('ativo');
+        dots[atual].classList.add('ativo');
+      }
+
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => irParaSlide(i));
+      });
+
+      setInterval(() => {
+        irParaSlide((atual + 1) % slides.length);
+      }, 4000);
+    </script>
+
+    <script src="https://unpkg.com/scrollreveal" defer></script>
     <script src="Js/main.js" defer></script>
 
-    <script type="application/ld+json" defer>
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "CRIA+",
-  "description": "Móveis planejados de alto padrão em Luanda, Angola. Design moderno, sofisticação e funcionalidade.",
-  "url": "https://quicando204.github.io/sitecria/",
-  "logo": "https://quicando204.github.io/sitecria/img/Logo.webp",
-  "image": "https://quicando204.github.io/sitecria/img/cria.webp",
-  "telephone": "+244936055943",
-  "priceRange": "$$",
-  "areaServed": {
-    "@type": "City",
-    "name": "Luanda"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Viana",
-    "addressRegion": "Luanda",
-    "addressCountry": "AO"
-  },
-  "sameAs": []
-}
-</script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "CRIA+",
+      "description": "Móveis planejados de alto padrão em Luanda, Angola. Design moderno, sofisticação e funcionalidade.",
+      "url": "https://quicando204.github.io/sitecria/",
+      "logo": "https://quicando204.github.io/sitecria/img/Logo.webp",
+      "image": "https://quicando204.github.io/sitecria/img/cria.webp",
+      "telephone": "+244936055943",
+      "priceRange": "$$",
+      "areaServed": {
+        "@type": "City",
+        "name": "Luanda"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Viana",
+        "addressRegion": "Luanda",
+        "addressCountry": "AO"
+      },
+      "sameAs": []
+    }
+    </script>
   </body>
 </html>
